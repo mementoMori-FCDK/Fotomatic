@@ -1,3 +1,3 @@
 # Fotomatic
 Responsive website practice at codecademy.com
-[Design specs] (fotomatic_spec_landing.png)
+[Design specs](resources/fotomatic_spec_landing.png)
