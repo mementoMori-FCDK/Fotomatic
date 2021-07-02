@@ -26,6 +26,7 @@ html {
 
 .image-container img {
   display: block;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -41,6 +42,11 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 100;
+}
+
+header .desktop {
+  height: 25px;
 }
 
 header .content {
@@ -113,6 +119,10 @@ header .mobile {
 /* Sign Up Section */
 
 #sign-up-section {
+  background-image: url("../images/banner-landingpage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -120,6 +130,9 @@ header .mobile {
 }
 
 #sign-up-cta {
+  position: relative;
+  top: 170px;
+  left: 10%;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
@@ -223,6 +236,10 @@ header .mobile {
   background-color: white;
 }
 
+.feature .content {
+  padding: 40px 0;
+}
+
 .feature .image-container {
   width: 90%;
   height: 65%;
@@ -271,7 +288,7 @@ header .mobile {
 /* Filters Section */
 
 #filters-section {
-  padding: 4rem 0;
+  padding: 4rem 1%;
   background-color: #4a4a4a;
 }
 
@@ -294,6 +311,7 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
@@ -319,10 +337,6 @@ header .mobile {
     line-height: 1.4;
   }
 
-  #filters-section .images-container {
-    padding: 0;
-  }
-
   #filters-section .extra {
     display: none;
   }
@@ -334,11 +348,13 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
+  display: flex;
+  justify-content: center;
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -347,21 +363,21 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
@@ -371,18 +387,24 @@ header .mobile {
 /* Footer */
 
 footer {
+  box-sizing: border-box;
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
+  height: 3.875rem;
 }
 
 footer .content {
   color: white;
   display: flex;
-  font-size: .75rem;
+}
+
+footer .location {
+  font-size: 0.75rem;
 }
 
 footer .copyright {
   flex-grow: 1;
+  font-size: 0.75rem;
 }
 
 @media only screen and (min-width: 760px) {
